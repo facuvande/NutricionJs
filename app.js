@@ -49,7 +49,7 @@ do{
             alert("Has agregado " + cantidad + " coches")
             break;
         case 2:
-            for(let i = 0; i <= cochesInfo.length; i++){
+            for(let i = 0; i < cochesInfo.length; i++){
             
                 console.log(cochesInfo[i])
             } 
