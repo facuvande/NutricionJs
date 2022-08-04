@@ -1,40 +1,69 @@
-/* DESAFIO COMPLEMENTARIO CLASE 3 ELABORADO POR FACUNDO VANDECAVEYE */
-// OBJETIVO: Programa que al poner tu apellido te dice si tenes una deuda o no , y en caso de tenerla te pregunta si queres saber de cuanto es
+// Sistema de Autos , te va a preguntar que queres hacer, si ver el listado de coches, o si queres agregar un coche. En caso de querer ver el listado de coches y no tener coches registrados te lo va a informar.Y si queres agregar un coche te pregunta cuantos Autos queres agregar y en base a eso vas a agregar los vehiculos detallando nombre del coche , modelo , sistema de caja ,color y precio. 
 
-// Definimos variables
-let apellido;
+
+alert("Bienvenido al Sistema de Coches!")
 let opcion;
 
-// Preguntamos primero el apellido fuera del ciclo para que si ingreso ESC no me recorra todo el programa.
-apellido = prompt("Ingrese el apellido (Ingresando ESC podras salir del programa): ");
+const cochesInfo = []
 
-while(apellido != "ESC"){
-    switch(apellido){
-        case "Garcia":
-            alert("Garcia , tienes una deuda pendiente.");
-            opcion = prompt("Quieres saber de cuanto es la deuda? (Ingresar S o N en Mayusculas): ");
-            if(opcion=="S"){
-                alert("Tienes una deuda de $5.000");
-            }
+let cantidad;
+
+
+class Coches{
+    constructor(nombre, modelo, caja, color, precio){
+        this.nombre = nombre.toUpperCase(),
+        this.modelo = modelo.toUpperCase(),
+        this.caja = caja.toUpperCase(),
+        this.color = color.toUpperCase(),
+        this.precio = precio
+    }
+
+}
+
+function agregaCoches(){
+    for(let i = 0; i<cantidad;i++){
+        nombre = prompt("Dame el nombre del coche numero " + i);
+        modelo = prompt("Dame el Modelo del coche numero " + i);
+        caja = prompt("Dame el Color del coche numero " + i);
+        color = prompt("Dame la Caja del coche numero " + i);
+        do{
+            precio = parseInt(prompt("Dame el Precio del coche numero " + i));
+        }while(isNaN(precio))
+        cochesInfo.push(new Coches(nombre, modelo, caja, color, precio))
+    }
+}
+
+do{
+    opcion = parseInt(prompt("Que te gustaria hacer? \n 1. Agregar coche \n 2. Ver listado de coches registrados \n 3. Salir"))
+    while(opcion == 2 && cochesInfo.length == 0){
+        alert("Primero debes registrar un coche.")
+        opcion = parseInt(prompt("Que te gustaria hacer? \n 1. Agregar coche \n 2. Ver listado de coches registrados \n 3. Salir"))
+
+    }
+
+
+    switch(opcion){
+        case 1:
+            cantidad = parseInt(prompt("Cuantos coches agregaras?"))
+            agregaCoches()
+            alert("Has agregado " + cantidad + " coches")
             break;
-        case "Dominguez":
-            alert("Dominguez , tienes una deuda pendiente.");
-            opcion = prompt("Quieres saber de cuanto es la deuda? (Ingresar S o N en Mayusculas): ");
-            if(opcion=="S"){
-                alert("Tienes una deuda de $8.000");
-            }
+        case 2:
+            for(let i = 0; i <= cochesInfo.length; i++){
+            
+                console.log(cochesInfo[i])
+            } 
+            
             break;
-        case "Perez":
-            alert("Perez , tienes una deuda pendiente.");
-            opcion = prompt("Quieres saber de cuanto es la deuda? (Ingresar S o N en Mayusculas): ");
-            if(opcion=="S"){
-                alert("Tienes una deuda de $5.000");
-            }
+        case 3:
             break;
         default:
-            alert("El apellido " + apellido + " No tiene deuda pendiente.")
+            alert("Opcion invalida. Intenta nuevamente.")
             break;
     }
-    // Volvemos a preguntar el apellido para correr nuevamente el ciclo en caso de que la opcion no sea ESC
-    apellido = prompt("Ingrese el apellido (Ingresando ESC podras salir del programa): ");
-}
+    
+}while(isNaN(opcion) || opcion != 3)
+
+
+
+
