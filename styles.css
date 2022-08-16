@@ -1,0 +1,12 @@
+.guias-container {
+    background-color: #effe24;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.card{
+    text-align: center;
+}

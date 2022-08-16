@@ -26,6 +26,7 @@ const guias = [
 
 alert('Carrito de compra');
 
+
 let opcion;
 let busqueda = () => {
     opcion = parseInt(prompt("Que deseas hacer? \n 1. Ver detalles de las Guias \n 2. Comprar una Guia \n 3. Ver guia mas barata \n 4. Aplicar Descuento \n 5. Agregar Guia \n 6. Eliminar Guia\n 7. Salir."))
@@ -68,7 +69,7 @@ let aplicadorDescuento = () => {
 
 let opcionCompra;
 let guiaMasBarata = "";
-let precioMasBarato = 999999;
+let precioMasBarato = guias[0].precio;
 
 while(opcion!=7){
     switch(opcion){
@@ -134,4 +135,24 @@ while(opcion!=7){
             break;
     }
     busqueda();
+}
+
+const divGuias = document.querySelector('#guias')
+
+for(const corredor of guias) {
+    const guiaContainer = document.createElement('div');
+    guiaContainer.classList.add('card')
+
+    const parrafo1 = document.createElement('p');
+    parrafo1.textContent = corredor.nombre
+    const parrafo2 = document.createElement('p');
+    parrafo2.textContent = corredor.descripcion
+    const parrafo3 = document.createElement('p');
+    parrafo3.textContent = corredor.precio
+
+    guiaContainer.appendChild(parrafo1);
+    guiaContainer.appendChild(parrafo2);
+    guiaContainer.appendChild(parrafo3);
+
+    divGuias.appendChild(guiaContainer);
 }
