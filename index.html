@@ -4,15 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactuar con HTML | Facundo Vandecaveye</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <meta name="description" content="Mejorá tu alimentación a través del desarrollo de hábitos saludables y sostenibles en el tiempo. Mi unico objetivo es ayudarte a lograr tus metas y acompañarte a lo largo de todo el proceso.">
+    <meta name="keywords" content="MelanyNutricion, nutricionista, alimentacion saludable, comida,planes de alimentacion, a domicilio, presencial, online, virtual, alimentos">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/3756f86c62.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MelanyNutricion | Inicio</title>
+</head> 
 <body>
+    <!-- Encabezado -->
+    <div class="contenedorGeneral">
+    <header class="header">
+        <div class="logoHeader">
+            <a href="index.html"><img src="./img/m.png" alt="Logo de la pagina"></a>
+        </div>
+
+        <nav class="navMenu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="menuIcon"><img src="./img/iconMenu.svg" alt="Menu"></i>
+            </label>
+
+            <ul>
+                <li><a href="./pages/sobre_mi.html">Sobre mi</a></li>
+                <li><a href="#serv">Servicios</a></li>
+                <li><a href="./pages/reserva.html">Reserva tu turno</a></li>
+                <li><a href="https://wa.link/huadcs" target="_blank">Contactame</a></li>
+                <li><a href="./pages/tienda.html">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <a href="https://wa.link/huadcs" class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <section class="primeraSeccion wrap">
+            <div class="wrap-texto">
+                <h1>Melany Nutricion</h1>
+                <a href="./pages/reserva.html" class="buttom">Reserva tu turno</a>
+                
+            </div>
+        </section>
+    <!-- About me -->
+        <h2 class="subtitle">Quien soy?</h2>
+        <section class="segundaSeccion about">
+            <div>
+                <img src="./img/aboutme.jpg" alt="Imagen de melany" class="imgAbout">
+            </div>
+            <div class="aboutDer">
+                <p>
+                    ¡Hola! Mi nombre es Melany soy Licenciada en Nutrición, yo creo que una persona cambiando su alimentación mejora en todos sus aspectos, es por esto que pongo siempre mi mayor esfuerzo en adaptar los planes de alimentación 100% a cada individuo considerando sus hábitos de vida y sus necesidades nutricionales. <br>
+                    Mi objetivo es que trabajemos juntos y que con el pasar del tiempo cuidar tu alimentacion no sea solo un esfuerzo , sino un habito de vida 
+                </p>
+                <a href="./pages/sobre_mi.html" class="boton bottomAbout">Conoce más</a>
+            </div>
+        </section>
+
+        <section class="terceraSeccion">
+            <h2 class="subtitle" id="serv">Servicios</h2>
     
-    <div class="guias-container" id="guias">
-
+            <div class="cardContainer">
+                <div class="card">
+            <!-- Tarjeta 1 -->
+                    <img src="./img/planesLog.jpg" alt="Imagen de melany">
+                    <h3>Planes de alimentación</h3>
+                    <p>Planes de alimentacion variados a tus gustos y problemas.</p>
+                    <a href="./pages/plan_alimentacion.html">Conoce mas</a>
+                </div>
+            <!-- Tarjeta2 -->
+                <div class="card">
+                    <img src="./img/img1.jpg" alt="Imagen de melany">
+                    <h3>Atención Online</h3>
+                    <p>Contamos con Atencion personalizada Online</p>
+                    <a href="./pages/atencion_online.html">Conoce mas</a>
+                </div>
+            <!-- Tarjeta 3 -->
+                <div class="card">
+                    <img src="./img/domicilio.jpg" alt="Imagen de melany">
+                    <h3>Atención a Domicilio</h3>
+                    <p>Contamos con Atencion a Domicilio sin importar donde vivas!</p>
+                    <a href="./pages/atencion_domicilio.html">Conoce mas</a>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- Pie de pagina -->
+        <footer class="footer">
+            <div class="footerContainer">
+                <div class="footerContenido">
+                    <h3 class="webLogoTxt">Melany Garin</h3>
+                    <p class="footerInfo">+54 3487-233583</p>
+                    <p class="footerInfo">meli.garin@hotmail.com</p>
+                </div>
+                <div class="footerMenu">
+                    <div class="footerContenido">
+                        <p class="menuTitulo">Menu</p>
+                        <a href="./sobre_mi.html" class="menuItemFooter">Sobre Mi</a>
+                        <a href="../index.html#serv" class="menuItemFooter">Servicios</a>
+                        <a href="./reserva.html" class="menuItemFooter">Reserva tu turno</a>
+                        <a href="https://wa.link/huadcs" target="_blank" class="menuItemFooter">Contactame</a>
+                        <a href="./tienda.html" class="menuItemFooter">Tienda</a>
+                    </div>
+                    <div class="footerContenido">
+                        <p class="menuTitulo">Legal</p>
+                        <a href="#" class="menuItemFooter">Privacidad</a>
+                        <a href="#" class="menuItemFooter">Cookies</a>
+                        <a href="#" class="menuItemFooter">Terminos y Condiciones</a>
+                    </div>
+                </div>
+    
+                <div class="footerContenido">
+                <p class="menuTitulo">Mis redes sociales</p>
+                    <div class="socialContainer">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyContainer">
+                <p class="copyright">&copy;2022, Melany Garin</p>
+            </div>
+        </footer>
     </div>
-
-    <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El formulario de contacto es el punto fundamental para comenzar el cambio de la alimentación y emprender el camino de una vida mas saludable. Se puede elegir la modalidad (Online, presencial y a domicilio), el servicio, la fecha y el horario">
+    <meta name="keywords" content="Melany Nutricion, nutricion, reserva tu turno, adelgaza, guia,personalizada">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/3756f86c62.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/logo.jpg" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>MelanyNutricion | Reserva tu turno</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <div class="contenedorGeneral">
+        <header class="header">
+            <div class="logoHeader">
+                <a href="../index.html"><img src="../img/m.png" alt="Logo de la pagina"></a>
+            </div>
+            <nav class="navMenu">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="menuIcon"><img src="../img/iconMenu.svg" alt="Menu"></i>
+                </label>
+                <ul>
+                    <li><a href="./sobre_mi.html">Sobre mi</a></li>
+                    <li><a href="../index.html#serv">Servicios</a></li>
+                    <li><a href="./reserva.html" id="inpage">Reserva tu turno</a></li>
+                    <li><a href="https://wa.link/huadcs" target="_blank">Contactame</a></li>
+                    <li><a href="./tienda.html">Tienda</a></li>
+                </ul>
+            </nav>
+        </header>
+    <!-- Contenido -->
+    <main>
+        <a href="https://wa.link/huadcs" class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <h1 class="title">Empezá hoy tu cambio, Reserva tu turno</h1>
+        <!-- Formulario que manda la info encriptada -->
+        <section class="reserva">
+        <form action="#" method="post">
+            <p>Nombre y Apellido</p>
+            <input type="text">
+            <p>Email</p>
+            <input type="email" placeholder="Correo Electronico">
+            <p>Teléfono</p>
+            <input type="text" placeholder="Cod.Area + Numero">
+            <p>Servicio</p>
+            <input type="text" placeholder="Planes de Alimentacion" readonly>
+            <p>Elige la modalidad</p>
+            <select name="modalidad" id="">
+                <option value="modalidad">Elige la modalidad</option>
+                <option value="presencial">Presencial</option>
+                <option value="virtual">Virtual</option>
+            </select>
+            <button class="contactoEnviar">Enviar</button>
+        </form>
+        <section class="consultorio">
+        <h2>Consultorio</h2>
+            <!-- Api de Google Maps con direccion de consultorio -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7856.775520179562!2d-59.03201627550459!3d-34.11134834473458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0bcf1a73d8ab%3A0xeb4342ba285669aa!2sDalma!5e0!3m2!1ses-419!2sar!4v1654539120488!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe"></iframe>
+        </section>
+        </section>
+    </main>
+        <!-- Pie de pagina -->
+        <footer class="footer">
+            <div class="footerContainer">
+                <div class="footerContenido">
+                    <h3 class="webLogoTxt">Melany Garin</h3>
+                    <p class="footerInfo">+54 3487-233583</p>
+                    <p class="footerInfo">meli.garin@hotmail.com</p>
+                </div>
+                <div class="footerMenu">
+                    <div class="footerContenido">
+                        <p class="menuTitulo">Menu</p>
+                        <a href="./sobre_mi.html" class="menuItemFooter">Sobre Mi</a>
+                        <a href="../index.html#serv" class="menuItemFooter">Servicios</a>
+                        <a href="./reserva.html" class="menuItemFooter">Reserva tu turno</a>
+                        <a href="https://wa.link/huadcs" target="_blank" class="menuItemFooter">Contactame</a>
+                        <a href="./tienda.html" class="menuItemFooter">Tienda</a>
+                    </div>
+                    <div class="footerContenido">
+                        <p class="menuTitulo">Legal</p>
+                        <a href="#" class="menuItemFooter">Privacidad</a>
+                        <a href="#" class="menuItemFooter">Cookies</a>
+                        <a href="#" class="menuItemFooter">Terminos y Condiciones</a>
+                    </div>
+                </div>
+    
+                <div class="footerContenido">
+                <p class="menuTitulo">Mis redes sociales</p>
+                    <div class="socialContainer">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyContainer">
+                <p class="copyright">&copy;2022, Melany Garin</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
