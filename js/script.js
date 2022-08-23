@@ -14,6 +14,13 @@ function cargarEvent() {
     // Elimina cursos del carrito
     carrito.addEventListener('click', eliminarCurso)
 
+
+    // Muestra los cursos de localstorage
+    document.addEventListener('DOMContentLoaded', () => {
+        articulosCarrito = JSON.parse( localStorage.getItem('carrito') ) || [];
+
+        mostrarCurso();
+    })
     // Vaciar Carrito
     vaciarCarrito.addEventListener('click', (e) => {
         e.preventDefault();
@@ -36,20 +43,13 @@ function eliminarCurso(e){
     // console.log(e.target.classList);
     if(e.target.classList.contains('borrar-curso')){
         // Accedemos al id del curso que queremos eliminar
-        let cursoId = Number(e.target.parentElement.parentElement.querySelector('#cantidad').textContent);
-        if(cursoId > 1){
-            cursoId= cursoId - 1;
-            
-        }else{
-            // Elimina del arreglo articulosCarrito por el data-id
-            articulosCarrito = articulosCarrito.filter(curso => Number(curso.id) !== cursoId);
-            
-            console.log('chau')
-        }
+        const cursoId = e.target.getAttribute('data-id');
         
+        // Elimina del arreglo articulosCarrito por el data-id
+        articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
         mostrarCurso()
+        }
     }
-}
 
 
 function leerDatosCurso(curso){
@@ -107,6 +107,13 @@ function mostrarCurso() {
 
         contenedorCarrito.appendChild(row);
     })
+
+    // Funcion que agrega carrito de compras al storage
+    sincronizarStorage();
+}
+
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito))
 }
 
 function limpiarHTML() {
