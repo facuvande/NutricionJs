@@ -33,21 +33,24 @@ function agregarCurso(e){
 
 function eliminarCurso(e){
     e.preventDefault()
+    // console.log(e.target.classList);
     if(e.target.classList.contains('borrar-curso')){
-        let cursoId = Number(e.target.parentElement.parentElement.querySelector('#cantidad').textContent)
-        console.log(cursoId)
-
+        // Accedemos al id del curso que queremos eliminar
+        let cursoId = Number(e.target.parentElement.parentElement.querySelector('#cantidad').textContent);
         if(cursoId > 1){
-            cursoId = cursoId - 1;
+            cursoId= cursoId - 1;
+            
         }else{
-            // Elimina del arreglo articulosCarrito por el data id
-        articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
-
+            // Elimina del arreglo articulosCarrito por el data-id
+            articulosCarrito = articulosCarrito.filter(curso => Number(curso.id) !== cursoId);
+            
+            console.log('chau')
         }
-
-        mostrarCurso();
+        
+        mostrarCurso()
     }
 }
+
 
 function leerDatosCurso(curso){
     const infoCurso = {
