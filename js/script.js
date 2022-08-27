@@ -5,6 +5,9 @@ const vaciarCarrito = document.querySelector('#vaciar-carrito')
 const listaCursos = document.querySelector('#buy')
 let articulosCarrito = [];
 
+// Confeti
+const jsConfetti = new JSConfetti();
+
 
 cargarEvent();
 function cargarEvent() {
@@ -134,3 +137,9 @@ collaps.forEach(e => {
         e.querySelector('.arrow-container').classList.toggle('up');
     })
 });
+
+document.querySelector(".buy-card").addEventListener('click', (e) =>{
+    jsConfetti.addConfetti()
+    articulosCarrito = []
+        limpiarHTML();
+})
