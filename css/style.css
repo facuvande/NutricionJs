@@ -87,6 +87,7 @@ body::-webkit-scrollbar-thumb {
 .u-full-width{
   width: 100%;
   box-sizing: border-box;
+  text-align: center;
 }
 .borrar-curso {
   background-color: red;
