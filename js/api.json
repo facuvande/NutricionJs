@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Guia semanal Nro 1",
+        "precio": 990
+    },
+    {
+        "id": 2,
+        "title": "Guia Semanal Nro 2",
+        "precio": 912
+    },
+    {
+        "id": 3,
+        "title": "Guia Semanal Nro 3",
+        "precio": 90
+    }
+]

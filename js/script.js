@@ -3,8 +3,38 @@ const carrito = document.querySelector('#carrito')
 const contenedorCarrito = document.querySelector('#lista-carrito tbody')
 const vaciarCarrito = document.querySelector('#vaciar-carrito')
 const listaCursos = document.querySelector('#buy')
+
 let articulosCarrito = [];
 
+document.addEventListener('DOMContentLoaded', () =>{
+    fetchData()
+})
+
+const fetchData = async () => {
+    try{
+        const res = await fetch('../js/api.json')
+        const data = await res.json()
+        mostrarArticulos(data)
+    } catch (error){
+        console.log(error)
+    }
+}
+
+
+    function mostrarArticulos(art){
+        art.forEach(articulos => {
+            const div = document.createElement('div')
+            div.classList.add("item")
+            div.setAttribute("id", "item")
+            div.innerHTML = `
+                    <img src="../img/guia${articulos.id}.png" alt="Guia Semanal 1">
+                    <h2 class="guiaTitle">${articulos.title}</h2>
+                    <p>$ ${articulos.precio}</p>
+                    <a href="#" class="boton agregar-carrito" data-id="${articulos.id}">Agregar al Carrito</a>
+            `
+            listaCursos.appendChild(div)
+        });
+    
 
 cargarEvent();
 function cargarEvent() {
@@ -28,6 +58,7 @@ function cargarEvent() {
         limpiarHTML();
     })
 }
+
 
 function agregarCurso(e){
     e.preventDefault();
@@ -133,6 +164,4 @@ collaps.forEach(e => {
         e.querySelector('.question').classList.toggle('active');
         e.querySelector('.arrow-container').classList.toggle('up');
     })
-});
-
-
+})}
