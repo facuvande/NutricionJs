@@ -1,7 +1,10 @@
+//Variables
+
 const bdark = document.querySelector('#dark')
 const body = document.querySelector("body")
 const btnSwitch = document.querySelector(".switch")
 
+// Llamamos a la funcion Load
 load();
 
 bdark.addEventListener("click", e =>{
